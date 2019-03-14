@@ -4,6 +4,7 @@ const client = new Discord.Client();
 
 client.on('ready', () => {
     client.user.setActivity('ObsiCraft', {type: 'STREAMING'});
+    console.log(`Bot has started);
 });
 
 client.on('message', msg => {
