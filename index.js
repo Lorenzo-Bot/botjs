@@ -2,9 +2,19 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
+let statuses = ['ObsiCraft', 'By !stereogaming18#0957'];
+
 client.on('ready', () => {
-    client.user.setActivity('ObsiCraft', {type: 'STREAMING'});
-    console.log(`Bot has started);
+    setInterval(function () {
+
+
+        let status = statuses[Math.floor(Math.random() * statuses.length)];
+
+
+        
+    
+    client.user.setActivity(status, {type: 'STREAMING'});
+        }, 10000)
 });
 
 client.on('message', msg => {
